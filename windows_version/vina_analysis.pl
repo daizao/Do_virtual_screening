@@ -36,18 +36,59 @@ for my $i (0..$#file){
 opendir(DIR,$input_lig_dir) || die "can not open the lig directory";
 @lig_file=readdir(DIR);
 close(DIR);
+#for my $i (0..$#lig_file){
+#	if($lig_file[$i] =~ /\.+$/){next}
+##	print $lig_file[$i]."\n";
+#	my $oldname=$lig_file[$i];
+#	$lig_file[$i] =~ s/ /_/g;
+##	my $temp=$input_lig_dir."\\".$lig_file[$i];
+##	push(@ligfile_with_path,$temp);
+#	if($oldname ne $lig_file[$i]){
+#		copy("$input_lig_dir/$oldname","$input_lig_dir/$lig_file[$i]") || die "can not move lig file ";
+#		}
+#	}
+#print @ligfile_with_path;
+
+my @temp_lig;
+for my $i (0..$#lig_file){
+	push(@temp_lig,$lig_file[$i]);
+}
+
+
+for my $i (0..$#temp_lig){
+	open(WF,">>dict_lig_name.txt") || die $!;
+	if($temp_lig[$i] =~ /\.+$/){next};
+	$temp_lig[$i] =~ /(.*?).pdbqt/;
+	print WF $1."\t";
+	$temp_lig[$i] =~ s/ /_/g;
+	$temp_lig[$i] =~ s/\(//g;
+	$temp_lig[$i] =~ s/\)//g;
+	$temp_lig[$i] =~ s/\[//g;
+	$temp_lig[$i] =~ s/\]//g;
+	$temp_lig[$i] =~ s/\'//g;
+	$temp_lig[$i] =~ /(.*?).pdbqt/;
+	print WF $1."\n";
+	close(WF);
+}
+
 for my $i (0..$#lig_file){
 	if($lig_file[$i] =~ /\.+$/){next}
 #	print $lig_file[$i]."\n";
 	my $oldname=$lig_file[$i];
 	$lig_file[$i] =~ s/ /_/g;
+	$lig_file[$i] =~ s/\(//g;
+	$lig_file[$i] =~ s/\)//g;
+	$lig_file[$i] =~ s/\[//g;
+	$lig_file[$i] =~ s/\]//g;
+	$lig_file[$i] =~ s/\'//g;
 #	my $temp=$input_lig_dir."\\".$lig_file[$i];
 #	push(@ligfile_with_path,$temp);
 	if($oldname ne $lig_file[$i]){
-		copy("$input_lig_dir/$oldname","$input_lig_dir/$lig_file[$i]") || die "can not move lig file ";
+		move("$input_lig_dir/$oldname","$input_lig_dir/$lig_file[$i]") || die "can not move lig file ";
 		}
-	}
-#print @ligfile_with_path;
+}
+
+
 
 for my $i (0..$#lig_file){
 	if($lig_file[$i] =~ /\.+$/){next}
@@ -59,7 +100,7 @@ for my $i (0..$#lig_file){
 		}
 	if (!(-e $new_temp."/".$1."_config.txt")){
 	open(RF,$grid) || die "do not have grid.gpf file";
-	open(WF,">>".$new_temp."/".$1."_config.txt");
+	open(WF,">>".$new_temp."/".$1."_config.txt") || die "can not write config.txt";
 	my @npts;
 	my @gridcenter;
 	print WF "receptor = ".$rep."\n";

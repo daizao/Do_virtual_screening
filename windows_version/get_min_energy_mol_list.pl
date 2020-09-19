@@ -85,4 +85,30 @@ for my $i (0..$#list){
 #	}
 #close(WF);
 
+my %lig_name_hash;
+open(RF,"dict_lig_name.txt") || die "do not have dit_lig_name file";
+while(my $line=<RF>){
+	chomp ($line);
+	my @arr=split(/\t/,$line);
+	$lig_name_hash{$arr[1]}=$arr[0];
+}
+close(RF);
+
+open(RF,"final_total_energy.txt") || die "no final_total_energy.txt";
+open(WF,">final_sort_energy.txt") || die $!;
+while(my $line=<RF>){
+	chomp($line);
+	if($.==1){print WF "Mol_old_name\t".$line."\n";next};
+	my @arr=split(/\t/,$line);
+	if(exists $lig_name_hash{$arr[0]}){
+		print WF $lig_name_hash{$arr[0]}."\t".join("\t",@arr)."\n";
+	}	
+}
+close(RF);
+close(WF);
+
+
 unlink "total_temp.txt";
+unlink "dict_lig_name.txt";
+unlink "final_total_energy.txt";
+
