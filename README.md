@@ -23,7 +23,7 @@
 	perl run.pl
 	
 	#Linux
-	perl -I /path/to/script run.pl
+	perl -I /path/to/script run.pl	#The storage path of the script
 ```
 
 ### Finally, a scoring and sorting file of all proteins and their ligands will be obtained.
