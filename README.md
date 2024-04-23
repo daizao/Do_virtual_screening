@@ -6,6 +6,16 @@
 	3.Please pay attention to the placement rules of folders.
 	4.Please put all the lig files (mol2 formula) in the same doc, and named lig_file.   
 	5.Before you run this program, you shuld copy your data in a safe path.
+	6.Make sure Open Babel is installed.
+	7.The Linux version of Vina is compiled in the Centos 7 system. If you encounter an error in Vina on Linux, please recompile.
+
+### Open Babel install in Linux
+```Bash
+	sudo dnf install openbabel -y
+
+```
+
+### Vina compilation reference:[Vina recompile](https://www.dzbioinformatics.com/2020/09/05/autodock-vina-%e6%ba%90%e7%a0%81%e7%bc%96%e8%af%91%e5%ae%89%e8%a3%85/)
 
 ### Sample
 ```Perl
