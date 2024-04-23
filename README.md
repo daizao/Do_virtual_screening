@@ -12,7 +12,7 @@
 ### Open Babel Website : [Open Babel](https://openbabel.org/)
 ### Open Babel install in Linux
 ```Bash
-	sudo dnf install openbabel -y
+sudo dnf install openbabel -y
 
 ```
 
@@ -20,11 +20,11 @@
 
 ### Run sample
 ```Perl
-	#Windows
-	perl run.pl
-	
-	#Linux
-	perl -I /path/to/script run.pl	#The storage path of the script
+#Windows
+perl run.pl
+
+#Linux
+perl -I /path/to/script run.pl	#The storage path of the script
 ```
 
 ### Finally, a scoring and sorting file of all proteins and their ligands will be obtained.
