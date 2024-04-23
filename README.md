@@ -1,11 +1,14 @@
-### 1. Prepare yourself's pdbqt and Grid box file.  
+## **Batch Virtual Screening Based on Vina**
 
-### 2. Please put all the lig files (pdbqt formula) in the same doc, and named lig_file !!!  
+###Prepare yourself's protein pdbqt and Grid box file.  
+###Please put all the lig files (pdbqt formula) in the same doc, and named lig_file !!!  
+###**Before you run this program, you shuld copy your data in a safe path**
 
-### 3. When you run again this program in linux, you should delete the original input and output file(such as dict*_file,final*_file,total*_file). (So before you run this program, you shuld copy your data in a safe path)  
-
-Usage：
+Sample
+```Perl
+	#Windows
+	perl run.pl
+	
+	#Linux
+	perl -I /path/to/script run.pl
 ```
-/path/to/perl run.pl
-```
- 
