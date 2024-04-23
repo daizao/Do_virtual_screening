@@ -27,7 +27,8 @@ perl run.pl
 perl -I /path/to/script run.pl	#The storage path of the script
 ```
 
-### Finally, a scoring and sorting file of all proteins and their ligands will be obtained.(file names:final_sort_energy.txt)
+### Finally, a scoring and sorting file of all proteins and their ligands will be obtained.
+### file names : final_sort_energy.txt
 	Mol_old_name    Molname Target  Energy
 	(2S)-2-[4-hydroxy-3-(3-methylbut-2-enyl)phenyl]-8,8     2S-2-4-hydroxy-3-3-methylbut-2-enylphenyl-8-8   MAPK14  -9.8
 	(E)-1-(2,4-dihydroxyphenyl)-3-(2,2-dimethylchromen-6-yl)prop-2-en-1-one E-1-2-4-dihydroxyphenyl-3-2-2-dimethylchromen-6-ylprop-2-en-1-one       ESR1    -8.5
