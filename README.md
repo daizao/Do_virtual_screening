@@ -17,7 +17,7 @@
 
 ### Vina compilation reference : [Vina recompile](https://www.dzbioinformatics.com/2020/09/05/autodock-vina-%e6%ba%90%e7%a0%81%e7%bc%96%e8%af%91%e5%ae%89%e8%a3%85/)
 
-### Sample
+### Run sample
 ```Perl
 	#Windows
 	perl run.pl
