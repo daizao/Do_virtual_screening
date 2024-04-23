@@ -4,7 +4,7 @@
 ### Please put all the lig files (pdbqt formula) in the same doc, and named lig_file !!!  
 ### **Before you run this program, you shuld copy your data in a safe path**
 
-Sample
+### Sample
 ```Perl
 	#Windows
 	perl run.pl
