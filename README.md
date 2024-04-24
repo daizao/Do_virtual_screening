@@ -5,7 +5,7 @@
 	2.Prepare yourself's protein pdbqt and Grid box file.  
 	3.Please pay attention to the placement rules of folders.
 	4.Please put all the lig files (mol2 formula) in the same doc, and named lig_file.   
-	5.Before you run this program, you shuld copy your data in a safe path.
+	5.Before you run this program, you should copy your data in a safe path.
 	6.Make sure Open Babel is installed.
 	7.The Linux version of Vina is compiled in the Centos 7 system. If you encounter an error in Vina on Linux, please recompile.
 
