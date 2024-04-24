@@ -14,6 +14,7 @@ close(DIR);
 my @gene_name;
 for my $i (0..$#all_file_name){
 	next if($all_file_name[$i]=~ /\.+$/);
+	next if($all_file_name[$i]=~ /git$/);
 	if(-d $all_file_name[$i]){
 #		print $all_file_name[$i]."\n";
 		push(@gene_name,$all_file_name[$i]);

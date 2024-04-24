@@ -2,14 +2,14 @@
 use strict;
 use warnings;
 use Cwd;
-
-my $dir=getcwd;
 use get_os;
+
+
 my $system_class=get_os::which_os();
 #print $system_class;
 
 print `perl mol2pdbqt.pl`;
-
+my $dir=getcwd;
 my @first_file;
 
 opendir(DIR,$dir) || die "no this dir";
@@ -21,6 +21,7 @@ my @doc;
 
 for my $i (0..$#first_file){
 	if($first_file[$i] =~ /\.+$/){next};
+	next if ($first_file[$i] =~ /git$/);
 
 ## determine which system 
 	if($system_class =~/Win/){

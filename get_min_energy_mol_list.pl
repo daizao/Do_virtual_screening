@@ -12,6 +12,7 @@ my @doc;	# store the gene doc;
 
 for my $i (0..$#first_file){
 	if($first_file[$i] =~ /\.+$/){next};
+	next if($first_file[$i] =~ /git$/);
 	if (-d $first_file[$i]){
 		push(@doc,$first_file[$i]);
 	}
