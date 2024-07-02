@@ -2,7 +2,8 @@
 
 ### Please pay attention to the following issues before calculation
 	1.Please make sure that the ligand file name is not too long.
-	2.Prepare yourself's protein pdbqt and Grid box file (if you want make a Grid box,the pdbqt must be provided. 
+	2.Prepare yourself's protein pdbqt and Grid box file 
+		(if you want make a Grid box,the pdbqt must be provided. 
 		So we do not make a batch script to produce pdbqt files).  
 	3.Please pay attention to the placement rules of folders.
 	4.Please put all the lig files (mol2 formula) in the same doc, and named lig_file.   
